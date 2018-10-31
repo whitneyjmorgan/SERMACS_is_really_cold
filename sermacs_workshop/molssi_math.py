@@ -43,17 +43,33 @@ def mean(num_list):
     mean: float
         Mean of list of numbers
     """
-    if len(num_list) < 1:
-        raise ValueError('List is empty')
-#   m = 0.0
-#   for i in num_list:
-#       m += i
-#   return m/len(num_list)
-    return sum(num_list)/len(num_list)
+
+    # check for list
+    if not isinstance(num_list,list):
+        raise TypeError('Function expects a list but got %s'%type(num_list))
+    # check for empty list
+    elif len(num_list) < 1:
+        raise ZeroDivisionError('List is empty')
+    else:
+        m = 0.0
+        for c, i in enumerate(num_list):
+            if not (isinstance(i,float) or isinstance(i,int)):
+                raise TypeError('Element %s is a %s but should be a float or int'%(c,type(i)))
+            else:
+                m += i
+        return m/len(num_list)
+
+#       try:
+#           return sum(num_list)/len(num_list)
+#       except TypeError: #does this trigger only on a TypeError...?
+#           raise TypeError('Values should be a float or int')
 
 if __name__ == "__main__":
     # Do something if this file is invoked on its own
 #   print(canvas())
     num_list = [1,2,3,4,5]
-    num_list = []
+#   num_list = [1.0,2.0,3.0,4.0,5.0]
+#   num_list = [1.0,2,3.0,4.0,5.0]
+    num_list = [1.0,'2',3.0,4.0,5.0]
+#   num_list = []
     print(mean(num_list))
