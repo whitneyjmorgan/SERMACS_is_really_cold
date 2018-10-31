@@ -21,8 +21,8 @@ def test_type_failure():
     with pytest.raises(TypeError):
         acs.title_case(test_input)
 
-@pytest.mark.skip
-def test_empty_str():
-    test_input = ''
-    with pytest.raises(IndexError):
-        acs.title_case(test_input)
+#@pytest.mark.skip
+#def test_empty_str():
+#    test_input = ''
+#    with pytest.raises(IndexError):
+#        acs.title_case(test_input)
