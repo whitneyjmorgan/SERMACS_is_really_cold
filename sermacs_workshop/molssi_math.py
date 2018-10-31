@@ -29,6 +29,31 @@ def canvas(with_attribution=True):
     return quote
 
 
+def mean(num_list):
+    """
+    Computes the mean of a list.
+    
+    Parameters
+    ----------
+    num_list: list
+        List to calculate mean of
+
+    Returns
+    -------
+    mean: float
+        Mean of list of numbers
+    """
+    if len(num_list) < 1:
+        raise ValueError('List is empty')
+#   m = 0.0
+#   for i in num_list:
+#       m += i
+#   return m/len(num_list)
+    return sum(num_list)/len(num_list)
+
 if __name__ == "__main__":
     # Do something if this file is invoked on its own
-    print(canvas())
+#   print(canvas())
+    num_list = [1,2,3,4,5]
+    num_list = []
+    print(mean(num_list))
