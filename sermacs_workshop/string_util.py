@@ -24,15 +24,15 @@ def title_case(sentence):
     if not isinstance(sentence,str):
         raise TypeError('Function expects string but got %s'%type(sentence))
 
-    if sentence == sentence.upper():
-        capitalized = ' '.join([x[0].upper()+x[1:].lower() for x in sentence.strip().split()])
-    else:
-        capitalized = ' '.join([x[0].upper()+x[1:] for x in sentence.strip().split()])
+#   if sentence == sentence.upper():
+#       capitalized = ' '.join([x[0].upper()+x[1:].lower() for x in sentence.strip().split()])
+#   else:
+    capitalized = ' '.join([x[0].upper()+x[1:].lower() for x in sentence.strip().split()])
     return capitalized
 
-if __name__ == "__main__":
-    this = 'I AM SUPER ANNOYED WITH THESE CCQC TURDS.'
-    this = ['I AM SUPER ANNOYED WITH THESE CCQC TURDS.']
-    this = ''
-#   this = 'I am super annoyed with these CCQC turds.'
-    print(title_case(this))
+#if __name__ == "__main__":
+#    this = 'I AM SUPER ANNOYED WITH THESE CCQC TURDS.'
+#    this = ['I AM SUPER ANNOYED WITH THESE CCQC TURDS.']
+#    this = ''
+##   this = 'I am super annoyed with these CCQC turds.'
+#    print(title_case(this))
