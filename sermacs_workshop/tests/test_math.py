@@ -19,6 +19,7 @@ def test_many(num_list,expected_mean):
 
 # do all tests combinations of x with 0,1 and y with 2,3
 # you cannot use ' quotes for these variables....
+
 @pytest.mark.parametrize("x",[0,1])
 @pytest.mark.parametrize("y",[2,3])
 def test_foo(x,y):
