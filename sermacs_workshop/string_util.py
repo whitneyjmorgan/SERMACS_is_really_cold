@@ -33,5 +33,6 @@ def title_case(sentence):
 if __name__ == "__main__":
     this = 'I AM SUPER ANNOYED WITH THESE CCQC TURDS.'
     this = ['I AM SUPER ANNOYED WITH THESE CCQC TURDS.']
+    this = ''
 #   this = 'I am super annoyed with these CCQC turds.'
     print(title_case(this))
